@@ -11,9 +11,10 @@ $ cat .ssh/id_rsa.pub           # view contents of public key
 > Login to  LISA with your sdemo account and password
 
 `ssh sdemoXXX@lisa.surfsara.nl`
+
 Replace XXX with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
 
-Some commands:
+*My first commands*
 
 ```
 $ date          # print or set system date and time
@@ -33,7 +34,7 @@ $ svn export https://subtrac.surfsara.nl/userdoc/examples/lisatutorial
 $ ls                    # list contents of directory
 ```
 
-Permission bits
+*Permission bits*
 ```
 $ ls –l                         # notice the permission bits
                                 # drwx------
@@ -54,7 +55,8 @@ $ chmod 700 jobs                # same as chmod +x jobs
                                 # ‘rwx’ 4+2+1 = 7
 $ cd jobs                       # now you can access jobs
 ```
-Standard input, output, and error
+
+*Standard input, output, and error*
 
 > Every program has three predefined input/output files associated:
 - Standard input (stdin): normally your keyboard
@@ -73,13 +75,13 @@ $ cat bcin | bc                 # | ‘pipe’: output of ‘cat’ goes to
                                 # input of ‘bc’
 ```
 
-Create simple text files
+*Create simple text files*
 
 ```
 $ nano                          # text editor, use ^X (Ctrl + X) to quit 
 ```
 
-Environment variables
+*Environment variables*
 
 ```
 $ echo $HOME                    # home directory
@@ -89,7 +91,7 @@ $ export PATH=$HOME/bin:$PATH
                                 # also for programs in $HOME/bin
 ```
 
-Some more commands      
+*Some more commands*
 
 ```
 $ touch one             # create an empty file

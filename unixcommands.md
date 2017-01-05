@@ -12,7 +12,7 @@ $ cat .ssh/id_rsa.pub           # view contents of public key
 
 `ssh sdemoXXX@lisa.surfsara.nl`
 
-Replace XXX with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
+Replace `XXX` with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
 
 *My first commands*
 
@@ -155,7 +155,7 @@ file2.txt
 
 ```
 #!/bin/bash
-echo $PWD
+date
 echo $HOME
 echo $PATH
 ```

@@ -1,15 +1,15 @@
 # UNIX Commands Hands-on
----
 
 > Generate SSH key on your laptop and upload the public key to portal.surfsara.nl
 
 ```
 $ cd                            # change directory to home directory
 $ ssh-keygen                    # generate SSH key pair
-$ cat .ssh/id_rsa.pub   # view contents of public key
+$ cat .ssh/id_rsa.pub           # view contents of public key
 ```
 
 > Login to  LISA with your sdemo account and password
+
 `ssh sdemoXXX@lisa.surfsara.nl`
 Replace XXX with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
 
@@ -148,7 +148,7 @@ file2.txt
 **For future questions, please contact us at helpdesk@surfsara.nl**
 
 ## Solution to exercises
----
+
 > Write a script to display date, home directory and the PATH environment variable
 
 ```

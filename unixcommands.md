@@ -1,4 +1,4 @@
-# UNIX Commands Hands-on
+# Introduction to UNIX Hands-on
 
 > Generate SSH key on your laptop and upload the public key to portal.surfsara.nl
 

@@ -124,7 +124,7 @@ Result should look like:
 ```
 Thu Jan  5 14:03:55 CET 2017
 /home/sdemo001
-/opt/moab/scripts:/opt/moab/bin:/sara/sw/modules-ng-64/wrappers/sara:/bin:/usr/bin:/usr/bin/X11:/usr/local/bin
+/sara/sw/modules-ng-64/wrappers/sara:/bin:/usr/bin:/usr/bin/X11:/usr/local/bin
 ```
 > Write a script using for loop to display number 1 to 10
 (Hint: bash for loop)

@@ -147,7 +147,7 @@ file1
 file2.txt
 ```
 
-**For future questions, please contact us at helpdesk@surfsara.nl**
+**For future questions, please contact us at helpdesk *at* surfsara.nl**
 
 ## Solution to exercises
 

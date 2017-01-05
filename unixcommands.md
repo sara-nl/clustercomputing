@@ -35,7 +35,6 @@ $ ls –l                         # notice the permission bits
                                 # drwx------
                                 # ‘d’ directory = folder
                                 # ‘r’ read, ‘w’ write, ‘x’ execute
-
 $ cd lisatutorial               # notice the change in prompt
                                 # ~ home directory
                                 # / separates directory names
@@ -49,7 +48,6 @@ $ chmod 700 jobs                # same as chmod +x jobs
                                 # ‘x’ execute = 1
                                 # ‘rw’ 4+2 = 6
                                 # ‘rwx’ 4+2+1 = 7
-
 $ cd jobs                       # now you can access jobs
 ```
 Standard input, output, and error
@@ -95,14 +93,13 @@ $ rmdir mydir           # delete directory
 $ rm three              # delete file
 ```
 ## My first script
-> Type in ‘nano’ the following and save the script as ‘myscript’ 
+> Type in *nano* the following and save the script as *myscript* 
 
 ```
 #!/bin/bash
 echo "Hello World!"
 echo "$1 + $2 is "
 echo "$1 + $2" | bc
-
 $ chmod +x myscript     # make the script executable
 $ ./myscript 3 4        # run the script
 ```
@@ -111,6 +108,12 @@ $ ./myscript 3 4        # run the script
 ## Exercises
 > Write a script to display current directory, home directory and the PATH environment variable
 
+Result should look like:
+```
+Thu Jan  5 14:03:55 CET 2017
+/home/sdemo001
+/opt/moab/scripts:/opt/moab/bin:/sara/sw/modules-ng-64/wrappers/sara:/bin:/usr/bin:/usr/bin/X11:/usr/local/bin
+```
 > Write a script using for loop to display number 1 to 10
 (Hint: bash for loop)
 ```
@@ -121,7 +124,7 @@ done
 ```
 
 > Write a script to list all file names in directory lisatutorial/simple
-(Hint: Everything you type between backticks `` is evaluated (executed) by the shell before the main command,
+(Hint: Everything you type between backticks \`\` is evaluated (executed) by the shell before the main command,
 e.g. \`ls ~/lisatutorial/simple\`)
 
 Result of the program should be:

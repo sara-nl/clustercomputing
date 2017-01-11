@@ -56,8 +56,7 @@ $ ls –l
 $ chmod –x jobs                 # remove x-bit from jobs
 $ ls –ld jobs                   # -d flag shows properties of directory, not contents
 $ cd jobs                       # will fail
-$ chmod 700 jobs                # same as chmod +x jobs
-                                # ‘r’ read = 4
+$ chmod 700 jobs                # ‘r’ read = 4
                                 # ‘w’ write = 2
                                 # ‘x’ execute = 1
                                 # ‘rw’ 4+2 = 6
@@ -105,7 +104,7 @@ $ export PATH=$HOME/bin:$PATH
 ```
 $ touch one             # create an empty file
 $ cp one two            # copy
-$ less bcout            # view file
+$ less bcout            # view file, 'q' to quit
 $ mv two three          # rename file
 $ pwd                   # where am I
 $ mkdir mydir           # create directory

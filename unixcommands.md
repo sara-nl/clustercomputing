@@ -1,6 +1,6 @@
 # Hands-on: Introduction to UNIX
 
-
+Fill in the Google Form below if you haven't done that yet:
 https://docs.google.com/forms/d/e/1FAIpQLSd9oIWpoNvT0ROlTUrHA6iATbRbN813KSS3XTMLSp9EdECh0Q/viewform
 
 > Login to  LISA with your sdemo account and password
@@ -126,6 +126,7 @@ echo "$1 + $2 is "
 echo "$1 + $2" | bc
 ```
 
+Execute *myscript*
 ```
 $ chmod +x myscript     # make the script executable
 $ ./myscript 3 4        # run the script

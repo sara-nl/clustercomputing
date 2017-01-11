@@ -41,6 +41,10 @@ $ logout        # logout of the system
 $ svn export https://subtrac.surfsara.nl/userdoc/examples/lisatutorial
 $ ls                    # list contents of directory
 $ ls -l                 # what is the difference?
+$ ls -a                 # show all directories
+                        # '.' current directory
+                        # '..' parent directory
+$ cd ..                 # move one directory up
 ```
 
 *Permission bits*

@@ -38,6 +38,7 @@ $ logout        # logout of the system
 ```
 $ svn export https://subtrac.surfsara.nl/userdoc/examples/lisatutorial
 $ ls                    # list contents of directory
+$ ls -l                 # what is the difference?
 ```
 
 *Permission bits*

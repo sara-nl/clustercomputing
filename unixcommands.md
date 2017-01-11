@@ -1,6 +1,14 @@
 # Hands-on: Introduction to UNIX
 
-> Generate SSH key on your laptop and upload the public key to portal.surfsara.nl
+
+> Login to  LISA with your sdemo account and password
+
+`ssh sdemoXXX@lisa.surfsara.nl`
+
+Replace `XXX` with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
+Type `logout` or `Ctrl+d` to logout from LISA
+
+> Generate SSH key **on your laptop** and upload the public key to portal.surfsara.nl
 
 ```
 $ cd                            # change directory to home directory
@@ -8,11 +16,9 @@ $ ssh-keygen                    # generate SSH key pair
 $ cat .ssh/id_rsa.pub           # view contents of public key
 ```
 
-> Login to  LISA with your sdemo account and password
+> Login to LISA with your sdemo account and your key pair. You don't need to type in the password now if you didn't use a password to generate your key pair.
 
 `ssh sdemoXXX@lisa.surfsara.nl`
-
-Replace `XXX` with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
 
 *My first commands*
 

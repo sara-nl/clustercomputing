@@ -45,6 +45,7 @@ $ ls -a                 # show all directories
                         # '.' current directory
                         # '..' parent directory
 $ cd ..                 # move one directory up
+$ pwd                   # where am I
 ```
 
 *Permission bits*
@@ -110,7 +111,6 @@ $ touch one             # create an empty file
 $ cp one two            # copy
 $ less bcout            # view file, 'q' to quit
 $ mv two three          # rename file
-$ pwd                   # where am I
 $ mkdir mydir           # create directory
 $ rmdir mydir           # delete directory
 $ rm three              # delete file
@@ -124,6 +124,9 @@ $ rm three              # delete file
 echo "Hello World!"
 echo "$1 + $2 is "
 echo "$1 + $2" | bc
+```
+
+```
 $ chmod +x myscript     # make the script executable
 $ ./myscript 3 4        # run the script
 ```

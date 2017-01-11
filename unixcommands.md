@@ -1,6 +1,8 @@
 # Hands-on: Introduction to UNIX
 
 
+https://docs.google.com/forms/d/e/1FAIpQLSd9oIWpoNvT0ROlTUrHA6iATbRbN813KSS3XTMLSp9EdECh0Q/viewform
+
 > Login to  LISA with your sdemo account and password
 
 `ssh sdemoXXX@lisa.surfsara.nl`

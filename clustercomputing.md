@@ -42,10 +42,11 @@ sleep 20
 
 Execute the code:
 `./mycode`
-Does it work? Probably not! Why?
-Hint: change file permission to executable
 
-Write a job script and save it as 'job.sh':
+Does it work? Probably not! Why?
+(Hint: change file permission to executable)
+
+*Write a job script and save it as 'job.sh':*
 
 ```
 #SBATCH -N 1
@@ -54,15 +55,15 @@ Write a job script and save it as 'job.sh':
 ./mycode
 ```
 
-Submit a batch job:
+*Submit a batch job:*
 
 `sbatch job.sh`
 
-Query job status:
+*Query job status:*
 
 `squeue -u sdemoXXX`
 
-Cancel batch job:
+*Cancel batch job:*
 
 `scancel jobID`
 

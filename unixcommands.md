@@ -123,7 +123,8 @@ echo "$1 + $2 is "
 echo "$1 + $2" | bc
 ```
 
-Execute *myscript*
+> Execute *myscript*
+
 ```
 $ chmod +x myscript     # make the script executable
 $ ./myscript 3 4        # run the script

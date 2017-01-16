@@ -22,6 +22,7 @@ $ cat .ssh/id_rsa.pub           # view contents of public key
 *My first commands*
 
 ```
+$ pwd           # current directory
 $ date          # print or set system date and time
 $ w             # who logged in
 $ whoami        # who am I?

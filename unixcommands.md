@@ -28,7 +28,7 @@ $ w             # who logged in
 $ whoami        # who am I?
 $ abc           # an unknown command
 $ uname         # name of the system
-$ man bc        # manual of command ‘bc’
+$ man bc        # manual of command ‘bc’, press 'q' to quit manual
 $ bc            # calculator, type ‘quit’ to quit ‘bc’
 $ logout        # logout of the system
 ```

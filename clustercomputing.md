@@ -19,6 +19,7 @@ $ nano        # text editor
 ```
 
 > Exercise 2: software modules
+
 Go to *userinfo.cartesius.nl*, select Cartesius/Lisa -> Software.
 
 ```
@@ -27,3 +28,42 @@ module avail software     # list installed modules for 'software'
 module load modulename    # load module 'modulename'
 module unload modulename  # unload module 'modulename'
 ```
+
+> Exercise 3: running a job
+
+Open text editor, and type in the code below, save it to a file 'mycode'.
+
+```
+#!/bin/bash
+echo "running on " $(hostname)
+echo "1 + 1" | bc
+sleep 20
+```
+
+Execute the code:
+`./mycode`
+Does it work? Probably not! Why?
+Hint: change file permission to executable
+
+Write a job script and save it as 'job.sh':
+
+```
+#SBATCH -N 1
+#SBATCH -t 00:05:00
+#SBATCH -p short
+./mycode
+```
+
+Submit a batch job:
+
+`sbatch job.sh`
+
+Query job status:
+
+`squeue -u sdemoXXX`
+
+Cancel batch job:
+
+`scancel jobID`
+
+> Exercise 4: Run serial code on multiple cores

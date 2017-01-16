@@ -57,14 +57,46 @@ Does it work? Probably not! Why?
 
 *Submit a batch job:*
 
-`sbatch job.sh`
+On Cartesius: `sbatch job.sh`
+On Lisa: `qsub job.sh`
 
 *Query job status:*
 
-`squeue -u sdemoXXX`
+On Cartesius: `squeue -u sdemoXXX` or `squeue jobId`
+On Lisa: `qstat -u sdemoXXX` or `qstat -n jobId`
 
 *Cancel batch job:*
 
-`scancel jobID`
+On Cartesius: `scancel jobID`
+On Lisa: `qdel jobID`
 
 > Exercise 4: Run serial code on multiple cores
+
+Use bash for loop:
+
+```
+for i in {1..24}
+do
+(
+ ./mycode
+) &
+done
+wait
+```
+
+**NOTE** that
+
+`&` makes sure that each process runs at backgroud
+
+`wait` tells the script to wait until all processes are finished
+
+> Exercise 5: running a wave equation
+
+```
+module load openmpi
+module load c/intel
+module load hdf5
+make    # to compile the program.
+
+sbatch run_wave
+```

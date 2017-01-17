@@ -10,8 +10,8 @@ Replace `XXX` with your sdemo account number.
 
 After logging in to Cartesius, create a `.ssh` directory and copy your public key contents to file `authorized_keys`.
 **NOTE** that
-`.ssh` directory should have permission 700 (`rwx------`)
-`authorized_keys` should have permission 644 (`rw-r-xr-x`)
+`.ssh` directory should have permission 700 (`drwx------`)
+`authorized_keys` should have permission 644 (`-rw-r--r--`)
 
 ```
 mkdir .ssh
@@ -26,7 +26,7 @@ chmod 644 authorized_keys
 
 `cp -r /home/sdemo001/usingcartesius .`
 
-`.` is the current directory
+`.` is the current directory, you can also use `$HOME` instead
 
 > Exercise 1: warm up
 
@@ -96,7 +96,7 @@ On Lisa: `qstat -u sdemoXXX` or `qstat -n jobId`
 On Cartesius: `scancel jobID`
 On Lisa: `qdel jobID`
 
-Have you got the output? What does it look like?
+Have you got the output? How does it look like?
 
 *Job output*
 
@@ -123,7 +123,7 @@ wait
 
 `$i` is the value of `i` in the current loop
 
-`&` makes sure that each process runs at backgroud
+`&` makes sure that each process runs at backgroud simultaneously
 
 `wait` tells the script to wait until all processes are finished
 
@@ -135,6 +135,19 @@ sbatch matrixmul.sh
 ```
 
 `ssh` to the node where your job is running. Use `top` to see what is going on.
+
+The matlab program `matrixmul.m` is compiled using
+
+```
+module load matlab
+mcc -R –singleCompThread -m matrixmul.m
+module unload matlab
+```
+
+After compilation, no matlab module is needed to run the program, dus no license is needed.
+**NOTE** that,
+
+we have limited number of matlab license, therefore, we strongly recommend everyone to compile their matlab code before submitting it to the system.
 
 > Exercise 5: running a wave equation
 

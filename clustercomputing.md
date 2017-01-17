@@ -127,11 +127,9 @@ wait
 
 - `wait` tells the script to wait until all processes are finished
 
-Go to the `matlab` directory, look at the contents of script `matrixmul.sh`.
+Go to the `matlab` directory, look at the contents of script `matrixmul.sh`. Do you understand everything written there?
 
-Do you understand everything written there?
-
-Submit the job.
+If so, submit the job.
 
 ```
 cd matlab

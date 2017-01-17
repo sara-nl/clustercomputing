@@ -127,7 +127,11 @@ wait
 
 - `wait` tells the script to wait until all processes are finished
 
-Go to the `matlab` directory and submit job `matrixmul.sh`
+Go to the `matlab` directory, look at the contents of script `matrixmul.sh`.
+
+Do you understand everything written there?
+
+Submit the job.
 
 ```
 cd matlab
@@ -144,11 +148,11 @@ mcc -R –singleCompThread -m matrixmul.m
 module unload matlab
 ```
 
-After compilation, no matlab module is needed to run the program, dus no license is needed.
+After compilation, no matlab module is needed to run the program, which means NO license is needed.
 
 **NOTE** that,
 
-we have limited number of matlab license, therefore, we strongly recommend everyone to compile their matlab code before submitting it to the system.
+we have limited number of matlab licenses, therefore, we strongly recommend everyone to compile their matlab code before submitting it to the system.
 
 > Exercise 5: running a wave equation
 

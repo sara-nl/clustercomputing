@@ -6,6 +6,22 @@
 
 Replace `XXX` with your sdemo account number.
 
+**Optional: Using public keys for SSH authentication**
+
+After logging in to Cartesius, create a `.ssh` directory and copy your public key contents to file `authorized_keys`.
+**NOTE** that
+`.ssh` directory should have permission 700 (`rwx------`)
+`authorized_keys` should have permission 644 (`rw-r-xr-x`)
+
+```
+mkdir .ssh
+chmod 700 .ssh
+cd .ssh
+nano authorized_keys
+# copy your public key contents in the file and save it
+chmod 644 authorized_keys
+```
+
 > Copy code examples to your home directory
 
 `cp -r /home/sdemo001/usingcartesius .`
@@ -28,6 +44,8 @@ $ nano            # text editor
 
 Go to *userinfo.cartesius.nl*, select *Cartesius -> Software* or *Lisa -> Software*.
 
+You will see a list of sofware that is already installed on the system. Use the commands below to load/unload a module.
+
 ```
 module avail                # list installed modules on the system
 module avail software       # list installed modules for 'software'
@@ -41,7 +59,7 @@ Open a text editor, e.g. `nano` and type in the code below, save it to a file `m
 
 ```
 #!/bin/bash
-echo "command line argument " $1
+echo "command line argument is " $1
 echo "running on " $(hostname)
 echo "1 + 1" | bc
 sleep 20
@@ -56,10 +74,11 @@ Does it work? Probably not! Why?
 *Write a job script and save it as `job.sh`:*
 
 ```
+#!/bin/bash
 #SBATCH -N 1
 #SBATCH -t 00:05:00
 #SBATCH -p short
-./mycode
+./mycode 1
 ```
 
 *Submit a batch job:*
@@ -76,6 +95,15 @@ On Lisa: `qstat -u sdemoXXX` or `qstat -n jobId`
 
 On Cartesius: `scancel jobID`
 On Lisa: `qdel jobID`
+
+Have you got the output? What does it look like?
+
+*Job output*
+
+On Cartesius: `slurm-NNNNN.out`
+On Lisa: `job.sh.eNNNNN` and `job.sh.oNNNNN`
+
+Where `NNNNN` is the jobID.
 
 > Exercise 4: Run serial code on multiple cores
 
@@ -99,9 +127,19 @@ wait
 
 `wait` tells the script to wait until all processes are finished
 
+Go to the `matlab` directory and submit job `matrixmul.sh`
+
+```
+cd matlab
+sbatch matrixmul.sh
+```
+
+`ssh` to the node where your job is running. Use `top` to see what is going on.
+
 > Exercise 5: running a wave equation
 
 ```
+cd wave
 # load modules
 module load openmpi
 module load c/intel

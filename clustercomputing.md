@@ -83,25 +83,25 @@ Does it work? Probably not! Why?
 
 *Submit a batch job:*
 
-On Cartesius: `sbatch job.sh`
-On Lisa: `qsub job.sh`
+- On Cartesius: `sbatch job.sh`
+- On Lisa: `qsub job.sh`
 
 *Query job status:*
 
-On Cartesius: `squeue -u sdemoXXX` or `squeue jobId`
-On Lisa: `qstat -u sdemoXXX` or `qstat -n jobId`
+- On Cartesius: `squeue -u sdemoXXX` or `squeue jobId`
+- On Lisa: `qstat -u sdemoXXX` or `qstat -n jobId`
 
 *Cancel batch job:*
 
-On Cartesius: `scancel jobID`
-On Lisa: `qdel jobID`
+- On Cartesius: `scancel jobID`
+- On Lisa: `qdel jobID`
 
 Have you got the output? How does it look like?
 
 *Job output*
 
-On Cartesius: `slurm-NNNNN.out`
-On Lisa: `job.sh.eNNNNN` and `job.sh.oNNNNN`
+- On Cartesius: `slurm-NNNNN.out`
+- On Lisa: `job.sh.eNNNNN` and `job.sh.oNNNNN`
 
 Where `NNNNN` is the jobID.
 
@@ -121,11 +121,11 @@ wait
 
 **NOTE** that
 
-`$i` is the value of `i` in the current loop
+- `$i` is the value of `i` in the current loop
 
-`&` makes sure that each process runs at backgroud simultaneously
+- `&` makes sure that each process runs at backgroud simultaneously
 
-`wait` tells the script to wait until all processes are finished
+- `wait` tells the script to wait until all processes are finished
 
 Go to the `matlab` directory and submit job `matrixmul.sh`
 
@@ -145,6 +145,7 @@ module unload matlab
 ```
 
 After compilation, no matlab module is needed to run the program, dus no license is needed.
+
 **NOTE** that,
 
 we have limited number of matlab license, therefore, we strongly recommend everyone to compile their matlab code before submitting it to the system.

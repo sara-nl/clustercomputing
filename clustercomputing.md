@@ -157,7 +157,6 @@ we have limited number of matlab licenses, therefore, we strongly recommend ever
 ```
 cd wave
 # load modules
-module load openmpi
 module load c/intel
 module load hdf5
 # compile the program

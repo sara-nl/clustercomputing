@@ -172,3 +172,11 @@ Wait till the job finishes, and copy the result to your local computer to view
 scp sdemoNNN@cartesius.surfsara.nl:usingcartesius/wave/wave.h5.gif  ./
 ```
 
+> Exercise 6: Use scratch space
+
+Look at `mydata.sh` in `data` directory and see how you can copy input data to `$TMPDIR` and copy the result back to your home directory.
+
+```
+cd data
+sbatch mydata.sh
+```

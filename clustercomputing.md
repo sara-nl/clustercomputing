@@ -180,3 +180,7 @@ Look at `mydata.sh` in `data` directory and see how you can copy input data to `
 cd data
 sbatch mydata.sh
 ```
+
+Copy result locally to view it.
+
+`scp sdemoXXX@cartesius.surfsara.nl:usingcartesius/data/data_00000.h5.png .`

@@ -88,7 +88,7 @@ Does it work? Probably not! Why?
 
 *Query job status:*
 
-- On Cartesius: `squeue -u sdemoXXX` or `squeue jobId`
+- On Cartesius: `squeue -u sdemoXXX` or `squeue -j jobId`
 - On Lisa: `qstat -u sdemoXXX` or `qstat -n jobId`
 
 *Cancel batch job:*

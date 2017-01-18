@@ -42,7 +42,7 @@ $ nano            # text editor
 
 > Exercise 2: software modules
 
-Go to *userinfo.cartesius.nl*, select *Cartesius -> Software* or *Lisa -> Software*.
+Go to *userinfo.surfsara.nl*, select *Cartesius -> Software* or *Lisa -> Software*.
 
 You will see a list of sofware that is already installed on the system. Use the commands below to load/unload a module.
 

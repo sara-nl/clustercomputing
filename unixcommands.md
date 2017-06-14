@@ -19,6 +19,7 @@ MobaXterm user can find the generated key-pair at
 
 Replace `XXX` with your sdemo account number.
 NOTE that: the cursor won't move when you type your password. This is normal, just keep typing ...
+
 Type `logout` or `Ctrl+d` to logout from LISA
 
 

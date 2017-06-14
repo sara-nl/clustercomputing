@@ -28,7 +28,7 @@ chmod 644 authorized_keys
 
 `.` is the current directory, you can also use `$HOME` instead
 
-> Exercise 1: warm up
+## Exercise 1: warm up
 
 ```
 $ pwd             # current directory 
@@ -40,7 +40,7 @@ $ nano            # text editor
                   # enter some text and save it to a file
 ```
 
-> Exercise 2: software modules
+## Exercise 2: software modules
 
 Go to *userinfo.surfsara.nl*, select *Cartesius -> Software* or *Lisa -> Software*.
 
@@ -53,7 +53,7 @@ module load modulename      # load module 'modulename'
 module unload modulename    # unload module 'modulename'
 ```
 
-> Exercise 3: running a job
+## Exercise 3: running a job
 
 Open a text editor, e.g. `nano` and type in the code below, save it to a file `mycode`.
 
@@ -105,7 +105,8 @@ Have you got the output? How does it look like?
 
 Where `NNNNN` is the jobID.
 
-> Exercise 4: Run serial code on multiple cores
+
+## Exercise 4: Run serial code on multiple cores
 
 Use bash for loop:
 
@@ -127,6 +128,7 @@ wait
 
 - `wait` tells the script to wait until all processes are finished
 
+If you don't use matlab, you can skip the matlab example below and go to [Exercise 5](https://github.com/sara-nl/clustercomputing/blob/master/clustercomputing.md#exercise-5-use-scratch-space) directly.
 Go to the `matlab` directory, look at the contents of script `matrixmul.sh`. Do you understand everything written there?
 
 If so, submit the job.
@@ -153,7 +155,24 @@ After compilation, no matlab module is needed to run the program, which means NO
 
 we have limited number of matlab licenses, therefore, we strongly recommend everyone to compile their matlab code before submitting it to the system.
 
-> Exercise 5: running a wave equation
+
+## Exercise 5: Use scratch space
+
+This exercise copies data to the scratch space allocated for the job, use STOPOS to do the calculation, and copies the result back to the home directory after the calculation is complete.
+
+> Open the job script `run_imageconv_serial.sh` and `run_imageconv_parallel.sh`. Do you understand the scripts? What are the differences?
+
+$TMPDIR is the temporary directory on the scratch space generated for your job. If data size is big, it is recommended to copy the data to the scratch space first, do the calculation, then copy the results back.
+
+[STOPOS](https://userinfo.surfsara.nl/systems/lisa/software/stopos) is a useful tool to run a serial program with many different input parameters.
+
+```
+cd imageconv
+sbatch run_imageconv_serial.sh
+sbatch run_imageconv_parallel.sh
+```
+
+## Exercise 6: running a wave equation
 
 ```
 cd wave
@@ -172,15 +191,3 @@ Wait till the job finishes, and copy the result to your local computer to view
 scp sdemoNNN@cartesius.surfsara.nl:usingcartesius/wave/wave.h5.gif  ./
 ```
 
-> Exercise 6: Use scratch space
-
-Look at `mydata.sh` in `data` directory and see how you can copy input data to `$TMPDIR` and copy the result back to your home directory.
-
-```
-cd data
-sbatch mydata.sh
-```
-
-Copy result locally to view it.
-
-`scp sdemoXXX@cartesius.surfsara.nl:usingcartesius/data/data_00000.h5.png .`

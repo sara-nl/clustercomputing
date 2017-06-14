@@ -12,6 +12,7 @@ cp imagefile $TMPDIR
 cd $TMPDIR
 
 module load stopos
+stopos purge -p images
 stopos create -p images
 stopos -p images add imagefile
 
@@ -19,12 +20,15 @@ starttime=`date +%s`
 for i in {1..24}
 do
 (
-  stopos next -p images
-  if [ "$STOPOS_RC" != "OK" ]; then
-    break
-  fi
-  $jobdir/imageconv $STOPOS_VALUE
-  stopos remove -p images
+  while true;
+  do
+    stopos next -p images
+    if [ "$STOPOS_RC" != "OK" ]; then
+      break
+    fi
+    $jobdir/imageconv $STOPOS_VALUE
+    stopos remove -p images
+  done
 ) &
 done
 
@@ -33,6 +37,8 @@ endtime=`date +%s`
 runtime=$((endtime-starttime))
 
 echo "Total runtime is $runtime seconds."
+
+stopos purge -p images
 
 # Copy results back to home directory
 cp $TMPDIR/result* $jobdir/results_parallel/

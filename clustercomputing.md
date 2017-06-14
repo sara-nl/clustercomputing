@@ -22,11 +22,10 @@ nano authorized_keys
 chmod 644 authorized_keys
 ```
 
-> Copy code examples to your home directory
+> Clone the repository to your home directory
 
-`cp -r /home/sdemo001/usingcartesius .`
-
-`.` is the current directory, you can also use `$HOME` instead
+`git clone https://github.com/sara-nl/clustercomputing.git`
+`cd clustercomputing/code`
 
 ## Exercise 1: warm up
 
@@ -145,7 +144,7 @@ The matlab program `matrixmul.m` is compiled using
 
 ```
 module load matlab
-mcc -R –singleCompThread -m matrixmul.m
+mcc -R -singleCompThread -m matrixmul.m
 module unload matlab
 ```
 

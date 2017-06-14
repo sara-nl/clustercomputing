@@ -1,0 +1,8 @@
+Image convolution
+* source image: lena.png
+* target image: result.png (sharpened image of Lena)
+* kernel: { 
+						{0, -1, 0},
+						{-1, 5, -1},
+						{0, -1, 0}
+					};

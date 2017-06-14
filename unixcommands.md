@@ -17,8 +17,14 @@ MobaXterm user can find the generated key-pair at
 
 `ssh sdemoXXX@lisa.surfsara.nl`
 
-Replace `XXX` with your sdemo account number. You should be able to login to LISA without being asked for a password, because you’ve already uploaded your public key onto the SURFsara Portal.
+Replace `XXX` with your sdemo account number.
+NOTE that: the cursor won't move when you type your password. This is normal, just keep typing ...
 Type `logout` or `Ctrl+d` to logout from LISA
+
+
+> Upload your public key to [portal.surfsara.nl](https://portal.surfsara.nl)
+
+`Public ssh keys -> Add key`
 
 
 > Login to LISA with your sdemo account and your key pair. You don't need to type in the password now if you didn't use a password to generate your key pair.

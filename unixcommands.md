@@ -10,7 +10,7 @@ $ cat .ssh/id_rsa.pub           # view contents of public key
 
 MobaXterm user can find the generated key-pair at
 
-	`My Documents -> MobaXterm -> home -> .ssh`
+`My Documents -> MobaXterm -> home -> .ssh`
 
 
 > Login to  LISA with your sdemo account and password

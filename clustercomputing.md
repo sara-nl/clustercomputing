@@ -11,6 +11,7 @@ Replace `XXX` with your sdemo account number.
 After logging in to Cartesius, create a `.ssh` directory and copy your public key contents to file `authorized_keys`.
 **NOTE** that
 `.ssh` directory should have permission 700 (`drwx------`)
+
 `authorized_keys` should have permission 644 (`-rw-r--r--`)
 
 ```

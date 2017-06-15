@@ -24,7 +24,7 @@ chmod 644 authorized_keys
 
 > Clone the repository to your home directory
 
-`git clone https://github.com/sara-nl/clustercomputing.git`
+`git clone https://github.com/sara-nl/clustercomputing.git` 
 `cd clustercomputing/code`
 
 ## Exercise 1: warm up
